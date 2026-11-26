@@ -1,0 +1,13 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "regexManagers": [
+    {
+      "fileMatch": ["(^|/)getinfluxdb2-cli\\.sh$"],
+      "matchStrings": ["influxdb2-client-(?<currentValue>[0-9]+\\.[0-9]+\\.[0-9]+)-linux-"],
+      "depNameTemplate": "influxdb2-client",
+      "datasourceTemplate": "github-releases",
+      "lookupNameTemplate": "influxdata/influxdb"
+    }
+  ]
+}
